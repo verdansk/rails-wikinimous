@@ -1,0 +1,9 @@
+<h1>Article Title:</h1>
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+
+<div class="btn btn-primary"><%= link_to "List Articles", articles_path %></div>
+
+<div class="btn btn-warning"><%= link_to "Edit Article", edit_article_path %></div>
+
+<div class="btn btn-danger"><%= link_to "Delete Article", article_path, method: :delete, data: { confirm: 'You sure, buddy?' } %></div>

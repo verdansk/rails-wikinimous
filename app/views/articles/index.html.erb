@@ -1,0 +1,18 @@
+<h1>Articles</h1>
+    <%= link_to new_article_path do %>
+    <div class="add-article">
+      <i class="fas fa-plus"></i>
+      <p>Add an Article</p>
+    </div>
+    <% end %>
+<ul>
+<% @articles.each_with_index do |i,n| %>
+  <%= link_to article_path(i.id) do %>
+    <li class="card">
+      | <%= n + 1 %> | <%= i.title %> <br>
+      <%= i.content %>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+
